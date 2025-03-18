@@ -2,21 +2,23 @@ package com.example.tddpractice.prac1.commandpattern;
 
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 public class Button {
-    private Alarm alarm;
-    private Lamp lamp;
+    private List<Command> commands = new ArrayList<>();
 
-    public Button(Alarm alarm, Lamp lamp) {
-        this.alarm = alarm;
-        this.lamp = lamp;
+    public Button() {
     }
 
-    private boolean on;
+    public void addCommand(Command command){
+        commands.add(command);
+    }
 
-    public void turnOn() {
-        on = true;
-        alarm.turnOn();
-        lamp.turnOn();
+    public void execute() {
+        for (Command command : commands){
+            command.execute();
+        }
     }
 }

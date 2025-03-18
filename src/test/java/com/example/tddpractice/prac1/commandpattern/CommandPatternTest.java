@@ -1,9 +1,6 @@
 package com.example.tddpractice.prac1.commandpattern;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.awt.*;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -25,7 +22,7 @@ public class CommandPatternTest {
     @Test
     public void 알림가_켜짐(){
         Alarm alarm = new Alarm();
-        alarm.turnOn();
+        alarm.start();
         assertTrue(alarm.isOn());
     }
 
@@ -33,10 +30,15 @@ public class CommandPatternTest {
     public void 버튼_켜면_램프와_알림_모두_켜짐(){
         Alarm alarm = new Alarm();
         Lamp lamp = new Lamp();
-        Button button = new Button(alarm, lamp);
-        button.turnOn();
-        assertTrue(button.getAlarm().isOn());
-        assertTrue(button.getLamp().isOn());
+        Command alarmButton = new AlarmCommand(alarm);
+        Command lampButton = new LampCommand(lamp);
+        Button button = new Button();
+        button.addCommand(alarmButton);
+        button.addCommand(lampButton);
+        button.execute();
+
+        assertTrue(alarm.isOn());
+        assertTrue(lamp.isOn());
     }
 
 
