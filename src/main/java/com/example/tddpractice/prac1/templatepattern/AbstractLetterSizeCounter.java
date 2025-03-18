@@ -1,6 +1,6 @@
 package com.example.tddpractice.prac1.templatepattern;
 
-public abstract class LetterSizeCounter {
+public abstract class AbstractLetterSizeCounter {
     abstract String parser(File file);
 
     int count(File file) {

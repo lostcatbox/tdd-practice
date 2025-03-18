@@ -1,6 +1,6 @@
 package com.example.tddpractice.prac1.templatepattern;
 
-public class ExcelLetterSizeCounter extends LetterSizeCounter {
+public class ExcelAbstractLetterSizeCounter extends AbstractLetterSizeCounter {
 
     public String parser(File file) {
         ExcelFile excelFile = (ExcelFile) file;

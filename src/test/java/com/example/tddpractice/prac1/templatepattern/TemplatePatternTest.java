@@ -10,7 +10,7 @@ public class TemplatePatternTest {
     @Test
     void Excel에서_내용추출후_글자수를_센다() {
         ExcelFile excelFile = new ExcelFile();
-        ExcelLetterSizeCounter excelLetterSizeCounter = new ExcelLetterSizeCounter();
+        ExcelAbstractLetterSizeCounter excelLetterSizeCounter = new ExcelAbstractLetterSizeCounter();
         int size = excelLetterSizeCounter.count(excelFile);
         assertEquals(excelFile.getText().length(), size);
     }
@@ -18,7 +18,7 @@ public class TemplatePatternTest {
     @Test
     void Docs에서_내용추출후_글자수를_센다() {
         DocsFile docsFile = new DocsFile();
-        DocsLetterSizeCounter docsLetterSizeCounter = new DocsLetterSizeCounter();
+        DocsAbstractLetterSizeCounter docsLetterSizeCounter = new DocsAbstractLetterSizeCounter();
         int size = docsLetterSizeCounter.count(docsFile);
         assertEquals(docsFile.getBodyText().length(), size);
     }
