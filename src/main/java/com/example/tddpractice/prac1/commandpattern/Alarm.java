@@ -9,4 +9,8 @@ public class Alarm{
     public void start(){
         on = true;
     }
+
+    public boolean isOn() {
+        return on;
+    }
 }

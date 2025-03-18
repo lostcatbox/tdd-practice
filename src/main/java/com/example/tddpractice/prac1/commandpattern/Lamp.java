@@ -9,4 +9,8 @@ public class Lamp{
     public void turnOn(){
         on = true;
     }
+
+    public boolean isOn() {
+        return on;
+    }
 }
