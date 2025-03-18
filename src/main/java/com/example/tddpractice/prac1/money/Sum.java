@@ -1,4 +1,4 @@
-package com.example.tddpractice.prac1;
+package com.example.tddpractice.prac1.money;
 
 public class Sum implements Expression{
     private Expression augend;

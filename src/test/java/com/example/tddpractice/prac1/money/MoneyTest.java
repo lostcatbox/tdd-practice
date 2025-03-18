@@ -1,5 +1,9 @@
-package com.example.tddpractice.prac1;
+package com.example.tddpractice.prac1.money;
 
+import com.example.tddpractice.prac1.money.Bank;
+import com.example.tddpractice.prac1.money.Expression;
+import com.example.tddpractice.prac1.money.Money;
+import com.example.tddpractice.prac1.money.Sum;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

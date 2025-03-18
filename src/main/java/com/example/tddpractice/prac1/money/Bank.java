@@ -1,6 +1,4 @@
-package com.example.tddpractice.prac1;
-
-import ch.qos.logback.core.joran.sanity.Pair;
+package com.example.tddpractice.prac1.money;
 
 import java.util.Hashtable;
 import java.util.Objects;
