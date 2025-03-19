@@ -13,6 +13,10 @@ class UnderTest {
         System.out.println("testCase2()");
     }
 
+    public void testCase3() {
+        System.out.println("testCase3()");
+    }
+
     public void tearDown() {
         System.out.println("tearDown()");
     }
